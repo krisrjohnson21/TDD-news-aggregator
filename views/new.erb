@@ -1,0 +1,18 @@
+<h1 class="header">Add A New Article</h1><br>
+
+<h3 class="error"> <%= @errors %> </h3>
+
+<form action="/articles" method="post">
+  <label for="title">Article Title: </label>
+  <input type="text" name="title" id="title" value="<%= @title %>"><br>
+
+  <label for="description">Article Description: </label>
+  <input type="text" name="description" id="description" value="<%= @description %>"><br>
+
+  <label for="url">URL: </label>
+  <input type="text" name="url" id="url" value="<%= @url %>"><br><br>
+
+  <button type="submit">Add Article</button>
+</form>
+
+<a class="back" href="/articles">Back to All Articles</a>

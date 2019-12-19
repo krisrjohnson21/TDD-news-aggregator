@@ -1,0 +1,14 @@
+<h1 class="header">List of Really Cool Articles</h1>
+
+<ul>
+  <% @article_objects.each do |article| %>
+    <li>
+      <h2> <%= article.title %> </h2>
+      <h4> <%= article.description %> </h4>
+      <a href="<%= article.url %>" target="_blank"> <%= article.url %></a>
+    </li> <br>
+  <% end %>
+</ul>
+
+<h4 class="new"><a href="/articles/new">Add A New Article</a></h4>
+<h4 class="back"><a href="/articles">Back to All Article</a></h4>
